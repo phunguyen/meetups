@@ -1,8 +1,4 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import * as firebase from 'firebase'
-
-Vue.use(Vuex)
+import * as firebase from 'firebase/app'
 
 export default {
 	state: {

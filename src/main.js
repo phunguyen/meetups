@@ -5,7 +5,10 @@ import store from './store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import DateFilter from './filters/date'
-import * as firebase from 'firebase'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/database'
+import 'firebase/storage'
 import AppAlert from './components/shared/Alert'
 import Nl2br from 'vue-nl2br'
 
@@ -24,11 +27,11 @@ new Vue({
   render: h => h(App),
   created () {
   	firebase.initializeApp({
-  		apiKey: 'AIzaSyCXsMyzWcBFDq7zKzj__hFATiN9hcwuACY',
-	    authDomain: 'dev-meetups-6a620.firebaseapp.com',
-	    databaseURL: 'https://dev-meetups-6a620.firebaseio.com',
-	    projectId: 'dev-meetups-6a620',
-	    storageBucket: 'gs://dev-meetups-6a620.appspot.com'
+  		apiKey: '',
+	    authDomain: '',
+	    databaseURL: '',
+	    projectId: '',
+	    storageBucket: ''
   	})
     if(firebase.auth().onAuthStateChanged(user => {
       if(user) {
